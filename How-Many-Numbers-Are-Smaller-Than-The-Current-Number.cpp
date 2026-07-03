@@ -7,7 +7,6 @@ public:
             hash[nums[i]]++;
         }
         int soma = 0;
-        int indice = 0;
         int aux;
         for(int i = 0; i < 101; i++){
             if(hash[i] > 0){
@@ -21,12 +20,12 @@ public:
         }
         int ultimo = 0;
         bool trocado = 0;
-        int aux2;
+        aux = 0;
         for(int i = 0; i < 101; i++){
             if(hash[i] - ultimo > 1 && hash[i] != 0){
-                aux2 = ultimo;
+                aux = ultimo;
                 ultimo = hash[i];
-                hash[i] = aux2 + 1;
+                hash[i] = aux + 1;
                 trocado = 1;
             }
 
